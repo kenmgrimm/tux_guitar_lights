@@ -1,0 +1,53 @@
+#!/bin/bash
+##SCRIPT DIR
+DIR_NAME=`dirname "$0"`
+DIR_NAME=`cd "$DIR_NAME"; pwd`
+cd "${DIR_NAME}"
+##CLASSPATH
+CLASSPATH=${CLASSPATH}:./lib/tuxguitar.jar
+CLASSPATH=${CLASSPATH}:./lib/tuxguitar-lib.jar
+CLASSPATH=${CLASSPATH}:./lib/tuxguitar-editor-utils.jar
+CLASSPATH=${CLASSPATH}:./lib/tuxguitar-gm-utils.jar
+CLASSPATH=${CLASSPATH}:./lib/tuxguitar-awt-graphics.jar
+CLASSPATH=${CLASSPATH}:./lib/swt.jar
+CLASSPATH=${CLASSPATH}:./lib/gervill.jar
+CLASSPATH=${CLASSPATH}:./lib/itext-pdf.jar
+CLASSPATH=${CLASSPATH}:./lib/itext-xmlworker.jar
+CLASSPATH=${CLASSPATH}:./share/
+CLASSPATH=${CLASSPATH}:./share/tuxguitar-ascii.jar
+CLASSPATH=${CLASSPATH}:./share/tuxguitar-audiounit.jar
+CLASSPATH=${CLASSPATH}:./share/tuxguitar-browser-ftp.jar
+CLASSPATH=${CLASSPATH}:./share/tuxguitar-cocoa-integration.jar
+CLASSPATH=${CLASSPATH}:./share/tuxguitar-community.jar
+CLASSPATH=${CLASSPATH}:./share/tuxguitar-compat.jar
+CLASSPATH=${CLASSPATH}:./share/tuxguitar-converter.jar
+CLASSPATH=${CLASSPATH}:./share/tuxguitar-gervill.jar
+CLASSPATH=${CLASSPATH}:./share/tuxguitar-gm-settings.jar
+CLASSPATH=${CLASSPATH}:./share/tuxguitar-gpx.jar
+CLASSPATH=${CLASSPATH}:./share/tuxguitar-gtp-ui.jar
+CLASSPATH=${CLASSPATH}:./share/tuxguitar-gtp.jar
+CLASSPATH=${CLASSPATH}:./share/tuxguitar-image.jar
+CLASSPATH=${CLASSPATH}:./share/tuxguitar-jsa.jar
+CLASSPATH=${CLASSPATH}:./share/tuxguitar-lilypond.jar
+CLASSPATH=${CLASSPATH}:./share/tuxguitar-midi.jar
+CLASSPATH=${CLASSPATH}:./share/tuxguitar-musicxml.jar
+CLASSPATH=${CLASSPATH}:./share/tuxguitar-pdf.jar
+CLASSPATH=${CLASSPATH}:./share/tuxguitar-ptb.jar
+CLASSPATH=${CLASSPATH}:./share/tuxguitar-svg.jar
+CLASSPATH=${CLASSPATH}:./share/tuxguitar-tef.jar
+CLASSPATH=${CLASSPATH}:./share/tuxguitar-tuner.jar
+CLASSPATH=${CLASSPATH}:./dist/
+##LIBRARY_PATH
+LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:lib/
+LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/lib
+LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/lib
+LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/lib/jni
+LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
+##MAINCLASS
+MAINCLASS=org.herac.tuxguitar.app.TGMainSingleton
+##JVM ARGUMENTS
+VM_ARGS="-Xmx512m"
+##SWT ARGUMENTS
+SWT_ARGS="-XstartOnFirstThread"
+##LAUNCH
+exec java ${VM_ARGS} ${SWT_ARGS} -cp :${CLASSPATH} -Dtuxguitar.home.path="${DIR_NAME}" -Djava.library.path="${LD_LIBRARY_PATH}" ${MAINCLASS} "$1" "$2"

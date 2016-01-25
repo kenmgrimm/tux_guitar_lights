@@ -1,1 +1,1032 @@
-hello
+
+
+# Compiling tuxguitar
+
+MacBook: /data/projects/tux_guitar_lights/tuxguitar_phiresky
+$ echo $CLASSPATH
+
+MacBook: /data/projects/tux_guitar_lights/tuxguitar_phiresky
+$ echo $LD_LIBRARY_PATH
+
+MacBook: /data/projects/tux_guitar_lights/tuxguitar_phiresky
+$ java -version
+java version "1.8.0_51"
+Java(TM) SE Runtime Environment (build 1.8.0_51-b16)
+Java HotSpot(TM) 64-Bit Server VM (build 25.51-b03, mixed mode)
+MacBook: /data/projects/tux_guitar_lights/tuxguitar_phiresky
+$ javac -version
+javac 1.8.0_51
+MacBook: /data/projects/tux_guitar_lights/tuxguitar_phiresky
+$ which java
+/usr/bin/java
+MacBook: /data/projects/tux_guitar_lights/tuxguitar_phiresky
+$ which javac
+/usr/bin/javac
+MacBook: /data/projects/tux_guitar_lights/tuxguitar_phiresky
+$ cd build-scripts/tuxguitar-macosx-cocoa-64/
+MacBook: /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64
+
+
+MacBook: /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64
+$ mvn clean install
+
+MacBook: /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64
+$ lr target
+total 0
+drwxrwxr-x  3 MacBook  admin  102 Jan 24 18:52 tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app
+drwxrwxr-x  3 MacBook  admin  102 Jan 24 18:52 antrun
+
+
+####  app above is the compiled tuxguitar app.  Full output of mvn clean install shown below
+
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO]
+[INFO] tuxguitar-lib
+[INFO] tuxguitar-editor-utils
+[INFO] tuxguitar
+[INFO] tuxguitar-gm-utils
+[INFO] tuxguitar-ascii
+[INFO] tuxguitar-browser-ftp
+[INFO] tuxguitar-community
+[INFO] tuxguitar-compat
+[INFO] tuxguitar-converter
+[INFO] tuxguitar-gervill
+[INFO] tuxguitar-gm-settings
+[INFO] tuxguitar-gtp
+[INFO] tuxguitar-gtp-ui
+[INFO] tuxguitar-gpx
+[INFO] tuxguitar-jsa
+[INFO] tuxguitar-lilypond
+[INFO] tuxguitar-midi
+[INFO] tuxguitar-musicxml
+[INFO] tuxguitar-awt-graphics
+[INFO] tuxguitar-pdf
+[INFO] tuxguitar-ptb
+[INFO] tuxguitar-tef
+[INFO] tuxguitar-tuner
+[INFO] tuxguitar-svg
+[INFO] tuxguitar-image
+[INFO] tuxguitar-cocoa-integration
+[INFO] tuxguitar-audiounit
+[INFO] tuxguitar-macosx-cocoa-64
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-lib 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-lib ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-lib ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-lib/src/main/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-lib ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 181 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-lib/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-lib ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-lib/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-lib ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-lib ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-lib ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-lib/target/tuxguitar-lib-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-lib ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-lib/target/tuxguitar-lib-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-lib/1.3-SNAPSHOT/tuxguitar-lib-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-lib/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-lib/1.3-SNAPSHOT/tuxguitar-lib-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-editor-utils 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-editor-utils ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-editor-utils ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-editor-utils/src/main/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-editor-utils ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 173 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-editor-utils/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-editor-utils ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-editor-utils/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-editor-utils ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-editor-utils ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-editor-utils ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-editor-utils/target/tuxguitar-editor-utils-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-editor-utils ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-editor-utils/target/tuxguitar-editor-utils-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-editor-utils/1.3-SNAPSHOT/tuxguitar-editor-utils-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-editor-utils/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-editor-utils/1.3-SNAPSHOT/tuxguitar-editor-utils-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar/src/main/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 502 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar/target/tuxguitar-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar/target/tuxguitar-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar/1.3-SNAPSHOT/tuxguitar-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar/1.3-SNAPSHOT/tuxguitar-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-gm-utils 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-gm-utils ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-gm-utils ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gm-utils/src/main/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-gm-utils ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 7 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gm-utils/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-gm-utils ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gm-utils/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-gm-utils ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-gm-utils ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-gm-utils ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gm-utils/target/tuxguitar-gm-utils-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-gm-utils ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gm-utils/target/tuxguitar-gm-utils-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-gm-utils/1.3-SNAPSHOT/tuxguitar-gm-utils-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gm-utils/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-gm-utils/1.3-SNAPSHOT/tuxguitar-gm-utils-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-ascii 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-ascii ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-ascii ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-ascii ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 5 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-ascii/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-ascii ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-ascii/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-ascii ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-ascii ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-ascii ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-ascii/target/tuxguitar-ascii-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-ascii ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-ascii/target/tuxguitar-ascii-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-ascii/1.3-SNAPSHOT/tuxguitar-ascii-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-ascii/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-ascii/1.3-SNAPSHOT/tuxguitar-ascii-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-browser-ftp 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-browser-ftp ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-browser-ftp ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-browser-ftp ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 9 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-browser-ftp/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-browser-ftp ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-browser-ftp/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-browser-ftp ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-browser-ftp ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-browser-ftp ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-browser-ftp/target/tuxguitar-browser-ftp-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-browser-ftp ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-browser-ftp/target/tuxguitar-browser-ftp-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-browser-ftp/1.3-SNAPSHOT/tuxguitar-browser-ftp-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-browser-ftp/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-browser-ftp/1.3-SNAPSHOT/tuxguitar-browser-ftp-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-community 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-community ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-community ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 15 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-community ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 27 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-community/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-community ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-community/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-community ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-community ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-community ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-community/target/tuxguitar-community-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-community ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-community/target/tuxguitar-community-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-community/1.3-SNAPSHOT/tuxguitar-community-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-community/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-community/1.3-SNAPSHOT/tuxguitar-community-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-compat 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-compat ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-compat ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-compat ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 31 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-compat/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-compat ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-compat/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-compat ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-compat ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-compat ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-compat/target/tuxguitar-compat-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-compat ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-compat/target/tuxguitar-compat-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-compat/1.3-SNAPSHOT/tuxguitar-compat-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-compat/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-compat/1.3-SNAPSHOT/tuxguitar-compat-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-converter 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-converter ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-converter ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 8 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-converter ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 6 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-converter/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-converter ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-converter/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-converter ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-converter ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-converter ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-converter/target/tuxguitar-converter-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-converter ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-converter/target/tuxguitar-converter-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-converter/1.3-SNAPSHOT/tuxguitar-converter-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-converter/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-converter/1.3-SNAPSHOT/tuxguitar-converter-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-gervill 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-gervill ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-gervill ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 3 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-gervill ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 11 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gervill/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-gervill ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gervill/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-gervill ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-gervill ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-gervill ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gervill/target/tuxguitar-gervill-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-gervill ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gervill/target/tuxguitar-gervill-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-gervill/1.3-SNAPSHOT/tuxguitar-gervill-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gervill/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-gervill/1.3-SNAPSHOT/tuxguitar-gervill-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-gm-settings 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-gm-settings ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-gm-settings ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 3 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-gm-settings ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gm-settings/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-gm-settings ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gm-settings/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-gm-settings ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-gm-settings ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-gm-settings ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gm-settings/target/tuxguitar-gm-settings-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-gm-settings ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gm-settings/target/tuxguitar-gm-settings-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-gm-settings/1.3-SNAPSHOT/tuxguitar-gm-settings-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gm-settings/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-gm-settings/1.3-SNAPSHOT/tuxguitar-gm-settings-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-gtp 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-gtp ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-gtp ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 3 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-gtp ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gtp/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-gtp ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gtp/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-gtp ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-gtp ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-gtp ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gtp/target/tuxguitar-gtp-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-gtp ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gtp/target/tuxguitar-gtp-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-gtp/1.3-SNAPSHOT/tuxguitar-gtp-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gtp/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-gtp/1.3-SNAPSHOT/tuxguitar-gtp-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-gtp-ui 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-gtp-ui ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-gtp-ui ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 3 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-gtp-ui ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gtp-ui/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-gtp-ui ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gtp-ui/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-gtp-ui ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-gtp-ui ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-gtp-ui ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gtp-ui/target/tuxguitar-gtp-ui-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-gtp-ui ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gtp-ui/target/tuxguitar-gtp-ui-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-gtp-ui/1.3-SNAPSHOT/tuxguitar-gtp-ui-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gtp-ui/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-gtp-ui/1.3-SNAPSHOT/tuxguitar-gtp-ui-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-gpx 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-gpx ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-gpx ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-gpx ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 17 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gpx/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-gpx ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gpx/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-gpx ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-gpx ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-gpx ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gpx/target/tuxguitar-gpx-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-gpx ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gpx/target/tuxguitar-gpx-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-gpx/1.3-SNAPSHOT/tuxguitar-gpx-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-gpx/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-gpx/1.3-SNAPSHOT/tuxguitar-gpx-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-jsa 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-jsa ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-jsa ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 5 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-jsa ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 29 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-jsa/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-jsa ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-jsa/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-jsa ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-jsa ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-jsa ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-jsa/target/tuxguitar-jsa-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-jsa ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-jsa/target/tuxguitar-jsa-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-jsa/1.3-SNAPSHOT/tuxguitar-jsa-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-jsa/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-jsa/1.3-SNAPSHOT/tuxguitar-jsa-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-lilypond 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-lilypond ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-lilypond ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 5 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-lilypond ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 8 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-lilypond/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-lilypond ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-lilypond/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-lilypond ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-lilypond ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-lilypond ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-lilypond/target/tuxguitar-lilypond-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-lilypond ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-lilypond/target/tuxguitar-lilypond-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-lilypond/1.3-SNAPSHOT/tuxguitar-lilypond-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-lilypond/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-lilypond/1.3-SNAPSHOT/tuxguitar-lilypond-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-midi 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-midi ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-midi ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-midi ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 22 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-midi/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-midi ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-midi/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-midi ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-midi ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-midi ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-midi/target/tuxguitar-midi-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-midi ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-midi/target/tuxguitar-midi-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-midi/1.3-SNAPSHOT/tuxguitar-midi-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-midi/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-midi/1.3-SNAPSHOT/tuxguitar-midi-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-musicxml 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-musicxml ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-musicxml ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-musicxml ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 4 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-musicxml/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-musicxml ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-musicxml/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-musicxml ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-musicxml ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-musicxml ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-musicxml/target/tuxguitar-musicxml-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-musicxml ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-musicxml/target/tuxguitar-musicxml-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-musicxml/1.3-SNAPSHOT/tuxguitar-musicxml-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-musicxml/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-musicxml/1.3-SNAPSHOT/tuxguitar-musicxml-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-awt-graphics 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-awt-graphics ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-awt-graphics ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-awt-graphics/src/main/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-awt-graphics ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 5 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-awt-graphics/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-awt-graphics ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-awt-graphics/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-awt-graphics ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-awt-graphics ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-awt-graphics ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-awt-graphics/target/tuxguitar-awt-graphics-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-awt-graphics ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-awt-graphics/target/tuxguitar-awt-graphics-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-awt-graphics/1.3-SNAPSHOT/tuxguitar-awt-graphics-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-awt-graphics/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-awt-graphics/1.3-SNAPSHOT/tuxguitar-awt-graphics-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-pdf 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-pdf ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-pdf ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-pdf ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 7 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-pdf/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-pdf ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-pdf/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-pdf ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-pdf ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-pdf ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-pdf/target/tuxguitar-pdf-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-pdf ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-pdf/target/tuxguitar-pdf-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-pdf/1.3-SNAPSHOT/tuxguitar-pdf-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-pdf/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-pdf/1.3-SNAPSHOT/tuxguitar-pdf-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-ptb 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-ptb ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-ptb ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-ptb ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 21 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-ptb/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-ptb ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-ptb/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-ptb ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-ptb ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-ptb ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-ptb/target/tuxguitar-ptb-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-ptb ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-ptb/target/tuxguitar-ptb-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-ptb/1.3-SNAPSHOT/tuxguitar-ptb-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-ptb/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-ptb/1.3-SNAPSHOT/tuxguitar-ptb-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-tef 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-tef ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-tef ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-tef ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 18 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-tef/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-tef ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-tef/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-tef ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-tef ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-tef ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-tef/target/tuxguitar-tef-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-tef ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-tef/target/tuxguitar-tef-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-tef/1.3-SNAPSHOT/tuxguitar-tef-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-tef/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-tef/1.3-SNAPSHOT/tuxguitar-tef-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-tuner 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-tuner ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-tuner ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 3 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-tuner ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 11 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-tuner/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-tuner ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-tuner/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-tuner ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-tuner ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-tuner ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-tuner/target/tuxguitar-tuner-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-tuner ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-tuner/target/tuxguitar-tuner-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-tuner/1.3-SNAPSHOT/tuxguitar-tuner-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-tuner/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-tuner/1.3-SNAPSHOT/tuxguitar-tuner-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-svg 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-svg ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-svg ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-svg ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 13 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-svg/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-svg ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-svg/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-svg ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-svg ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-svg ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-svg/target/tuxguitar-svg-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-svg ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-svg/target/tuxguitar-svg-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-svg/1.3-SNAPSHOT/tuxguitar-svg-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-svg/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-svg/1.3-SNAPSHOT/tuxguitar-svg-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-image 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-image ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-image ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 3 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-image ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 9 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-image/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-image ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-image/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-image ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-image ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-image ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-image/target/tuxguitar-image-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-image ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-image/target/tuxguitar-image-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-image/1.3-SNAPSHOT/tuxguitar-image-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-image/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-image/1.3-SNAPSHOT/tuxguitar-image-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-cocoa-integration 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-cocoa-integration ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-cocoa-integration ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-cocoa-integration ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 13 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-cocoa-integration/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-cocoa-integration ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-cocoa-integration/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-cocoa-integration ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-cocoa-integration ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-cocoa-integration ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-cocoa-integration/target/tuxguitar-cocoa-integration-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-cocoa-integration ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-cocoa-integration/target/tuxguitar-cocoa-integration-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-cocoa-integration/1.3-SNAPSHOT/tuxguitar-cocoa-integration-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-cocoa-integration/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-cocoa-integration/1.3-SNAPSHOT/tuxguitar-cocoa-integration-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-audiounit 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-audiounit ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tuxguitar-audiounit ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tuxguitar-audiounit ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 6 source files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-AudioUnit/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tuxguitar-audiounit ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-AudioUnit/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tuxguitar-audiounit ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ tuxguitar-audiounit ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tuxguitar-audiounit ---
+[INFO] Building jar: /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-AudioUnit/target/tuxguitar-audiounit-1.3-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-audiounit ---
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-AudioUnit/target/tuxguitar-audiounit-1.3-SNAPSHOT.jar to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-audiounit/1.3-SNAPSHOT/tuxguitar-audiounit-1.3-SNAPSHOT.jar
+[INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/TuxGuitar-AudioUnit/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-audiounit/1.3-SNAPSHOT/tuxguitar-audiounit-1.3-SNAPSHOT.pom
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tuxguitar-macosx-cocoa-64 1.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ tuxguitar-macosx-cocoa-64 ---
+[INFO]
+[INFO] --- maven-dependency-plugin:2.4:copy (copy-libs) @ tuxguitar-macosx-cocoa-64 ---
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-lib:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-editor-utils:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-gm-utils:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-awt-graphics:?:jar
+[INFO] Configured Artifact: org.eclipse.swt:org.eclipse.swt.cocoa.macosx.x86_64:4.3:jar
+[INFO] Configured Artifact: com.itextpdf:itextpdf:?:jar
+[INFO] Configured Artifact: com.itextpdf.tool:xmlworker:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-ascii:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-browser-ftp:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-community:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-compat:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-converter:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-gervill:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-gm-settings:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-gtp:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-gtp-ui:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-gpx:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-jsa:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-lilypond:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-midi:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-musicxml:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-pdf:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-ptb:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-tef:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-tuner:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-svg:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-image:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-cocoa-integration:?:jar
+[INFO] Configured Artifact: org.herac.tuxguitar:tuxguitar-audiounit:?:jar
+[INFO] Copying tuxguitar-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/lib/tuxguitar.jar
+[INFO] Copying tuxguitar-lib-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/lib/tuxguitar-lib.jar
+[INFO] Copying tuxguitar-editor-utils-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/lib/tuxguitar-editor-utils.jar
+[INFO] Copying tuxguitar-gm-utils-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/lib/tuxguitar-gm-utils.jar
+[INFO] Copying tuxguitar-awt-graphics-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/lib/tuxguitar-awt-graphics.jar
+[INFO] Copying org.eclipse.swt.cocoa.macosx.x86_64-4.3.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/lib/swt.jar
+[INFO] Copying itextpdf-5.3.4.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/lib/itext-pdf.jar
+[INFO] Copying xmlworker-1.1.1.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/lib/itext-xmlworker.jar
+[INFO] Copying tuxguitar-ascii-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share/plugins/tuxguitar-ascii.jar
+[INFO] Copying tuxguitar-browser-ftp-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share/plugins/tuxguitar-browser-ftp.jar
+[INFO] Copying tuxguitar-community-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share/plugins/tuxguitar-community.jar
+[INFO] Copying tuxguitar-compat-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share/plugins/tuxguitar-compat.jar
+[INFO] Copying tuxguitar-converter-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share/plugins/tuxguitar-converter.jar
+[INFO] Copying tuxguitar-gervill-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share/plugins/tuxguitar-gervill.jar
+[INFO] Copying tuxguitar-gm-settings-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share/plugins/tuxguitar-gm-settings.jar
+[INFO] Copying tuxguitar-gtp-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share/plugins/tuxguitar-gtp.jar
+[INFO] Copying tuxguitar-gtp-ui-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share/plugins/tuxguitar-gtp-ui.jar
+[INFO] Copying tuxguitar-gpx-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share/plugins/tuxguitar-gpx.jar
+[INFO] Copying tuxguitar-jsa-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share/plugins/tuxguitar-jsa.jar
+[INFO] Copying tuxguitar-lilypond-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share/plugins/tuxguitar-lilypond.jar
+[INFO] Copying tuxguitar-midi-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share/plugins/tuxguitar-midi.jar
+[INFO] Copying tuxguitar-musicxml-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share/plugins/tuxguitar-musicxml.jar
+[INFO] Copying tuxguitar-pdf-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share/plugins/tuxguitar-pdf.jar
+[INFO] Copying tuxguitar-ptb-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share/plugins/tuxguitar-ptb.jar
+[INFO] Copying tuxguitar-tef-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share/plugins/tuxguitar-tef.jar
+[INFO] Copying tuxguitar-tuner-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share/plugins/tuxguitar-tuner.jar
+[INFO] Copying tuxguitar-svg-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share/plugins/tuxguitar-svg.jar
+[INFO] Copying tuxguitar-image-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share/plugins/tuxguitar-image.jar
+[INFO] Copying tuxguitar-cocoa-integration-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share/plugins/tuxguitar-cocoa-integration.jar
+[INFO] Copying tuxguitar-audiounit-1.3-SNAPSHOT.jar to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share/plugins/tuxguitar-audiounit.jar
+[INFO]
+[INFO] --- maven-antrun-plugin:1.7:run (copy) @ tuxguitar-macosx-cocoa-64 ---
+[INFO] Executing tasks
+
+copy-files:
+    [mkdir] Created dir: /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/doc
+	      [copy] Copying 636 files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share
+			     [copy] Copying 4 files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/doc
+				       [copy] Copying 5 files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/dist
+						      [copy] Copying 2 files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS/share/soundfont
+								     [copy] Copying 1 file to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app/Contents/MacOS
+									       [copy] Copying 7 files to /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/target/tuxguitar-1.3-SNAPSHOT-macosx-cocoa-64.app
+											 [INFO] Executed tasks
+											 [INFO]
+											 [INFO] --- maven-install-plugin:2.4:install (default-install) @ tuxguitar-macosx-cocoa-64 ---
+											 [INFO] Installing /data/projects/tux_guitar_lights/tuxguitar_phiresky/build-scripts/tuxguitar-macosx-cocoa-64/pom.xml to /Users/MacBook/.m2/repository/org/herac/tuxguitar/tuxguitar-macosx-cocoa-64/1.3-SNAPSHOT/tuxguitar-macosx-cocoa-64-1.3-SNAPSHOT.pom
+											 [INFO] ------------------------------------------------------------------------
+											 [INFO] Reactor Summary:
+											 [INFO]
+											 [INFO] tuxguitar-lib ...................................... SUCCESS [  4.612 s]
+											 [INFO] tuxguitar-editor-utils ............................. SUCCESS [  1.812 s]
+											 [INFO] tuxguitar .......................................... SUCCESS [  5.104 s]
+											 [INFO] tuxguitar-gm-utils ................................. SUCCESS [  0.643 s]
+											 [INFO] tuxguitar-ascii .................................... SUCCESS [  0.723 s]
+											 [INFO] tuxguitar-browser-ftp .............................. SUCCESS [  1.060 s]
+											 [INFO] tuxguitar-community ................................ SUCCESS [  1.140 s]
+											 [INFO] tuxguitar-compat ................................... SUCCESS [  1.562 s]
+											 [INFO] tuxguitar-converter ................................ SUCCESS [  0.740 s]
+											 [INFO] tuxguitar-gervill .................................. SUCCESS [  0.755 s]
+											 [INFO] tuxguitar-gm-settings .............................. SUCCESS [  0.545 s]
+											 [INFO] tuxguitar-gtp ...................................... SUCCESS [  1.331 s]
+											 [INFO] tuxguitar-gtp-ui ................................... SUCCESS [  0.482 s]
+											 [INFO] tuxguitar-gpx ...................................... SUCCESS [  0.924 s]
+											 [INFO] tuxguitar-jsa ...................................... SUCCESS [  0.925 s]
+											 [INFO] tuxguitar-lilypond ................................. SUCCESS [  1.258 s]
+											 [INFO] tuxguitar-midi ..................................... SUCCESS [  0.968 s]
+											 [INFO] tuxguitar-musicxml ................................. SUCCESS [  0.569 s]
+											 [INFO] tuxguitar-awt-graphics ............................. SUCCESS [  0.482 s]
+											 [INFO] tuxguitar-pdf ...................................... SUCCESS [  0.515 s]
+											 [INFO] tuxguitar-ptb ...................................... SUCCESS [  0.871 s]
+											 [INFO] tuxguitar-tef ...................................... SUCCESS [  0.786 s]
+											 [INFO] tuxguitar-tuner .................................... SUCCESS [  0.853 s]
+											 [INFO] tuxguitar-svg ...................................... SUCCESS [  0.821 s]
+											 [INFO] tuxguitar-image .................................... SUCCESS [  0.624 s]
+											 [INFO] tuxguitar-cocoa-integration ........................ SUCCESS [  0.609 s]
+											 [INFO] tuxguitar-audiounit ................................ SUCCESS [  0.437 s]
+											 [INFO] tuxguitar-macosx-cocoa-64 .......................... SUCCESS [  3.266 s]
+											 [INFO] ------------------------------------------------------------------------
+											 [INFO] BUILD SUCCESS
+											 [INFO] ------------------------------------------------------------------------
+											 [INFO] Total time: 34.974 s
+											 [INFO] Finished at: 2016-01-24T18:52:24-07:00
+											 [INFO] Final Memory: 171M/828M
+											 [INFO] ------------------------------------------------------------------------
